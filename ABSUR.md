@@ -11,6 +11,7 @@ Below are prerequisites needed for the project:
 The following step by step guide is used to implement the project
 
 **Step 1 : Setup Source and destination servers on AWS**
+
 ​Setup the ubuntu servers named Source and Destination on AWS. Ensure SSH traffic is enabled on both servers.
 
 ![alt text](Images/servers.png)
@@ -73,6 +74,7 @@ ssh username@target_server_ip_address
 ![alt text](Images/source%20connect%20to%20destination.png)
 
 ​Run `exit` to close the connection
+
 
 **Step 3 : Create test users and user data to backup**
 
@@ -144,7 +146,9 @@ If successful, Destination backup directory will now contain the test Users dire
 
 ![alt_text](Images/destination%20backup%20check.png)
 
-### Step 5 : Schedule Backup with Cron:
+
+**Step 5 : Schedule Backup with Cron**
+
 ​
 Edit the crontab file to schedule regular backups:
 ​
