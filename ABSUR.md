@@ -141,9 +141,17 @@ chmod +x backup.sh
 
 `./backup.sh`
 
+Backup to the Destination server can also be carried out using the rsync command
+```
+rsync -a ~/source_directory username@remote_host:destination_directory
+```
+
+![alt-text](Images/Rsync%20backup.png)
+
 If successful, Destination backup directory will now contain the test Users directory and config data from the Source server
 
 ![alt_text](Images/destination%20backup%20check.png)
+
 
 
 ### Step 5 : Schedule Backup with Cron
