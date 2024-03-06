@@ -1,4 +1,5 @@
 # Automated Backup System using Rsync
+## Prerequisites
 Below are prerequisites needed for the project:
 
 - Two Ubuntu servers (one named Source and the other named Destination)
@@ -6,11 +7,11 @@ Below are prerequisites needed for the project:
 - Basic knowledge of Linux command line
 ​
 
-### Step by Step Implementation
+## Step by Step Implementation
 
 The following step by step guide is used to implement the project
 
-**Step 1 : Setup Source and destination servers on AWS**
+### Step 1 : Setup Source and destination servers on AWS
 
 ​Setup the ubuntu servers named Source and Destination on AWS. Ensure SSH traffic is enabled on both servers.
 
@@ -25,8 +26,7 @@ sudo apt install rsync
 ```
 ​
 
-**Step 2 : Configure SSH Key-based Authentication:**
-​
+### Step 2 : Configure SSH Key-based Authentication
 
 We will set up SSH key-based authentication between the source and destination servers to allow secure communication without password prompts.
 ​
@@ -76,7 +76,7 @@ ssh username@target_server_ip_address
 ​Run `exit` to close the connection
 
 
-**Step 3 : Create test users and user data to backup**
+### Step 3 : Create test users and user data to backup
 
 Create test users directory
 
@@ -91,9 +91,8 @@ Add test users using touch command and configuration data using nano editor
 ![alt_text](Images/david%20config.png)
 
 
-**Step 4 : Create Backup Script**
+### Step 4 : Create Backup Script
 
-​
 Create a backup script in the source server
 ​
 ```
@@ -133,7 +132,7 @@ Save the edited script and exit.
 ![alt_text](Images/backup%20script.png)
 ​
 
-- Make the script executable:
+Make the script executable:
 ​
 ```
 chmod +x backup.sh
@@ -147,9 +146,8 @@ If successful, Destination backup directory will now contain the test Users dire
 ![alt_text](Images/destination%20backup%20check.png)
 
 
-**Step 5 : Schedule Backup with Cron**
+### Step 5 : Schedule Backup with Cron
 
-​
 Edit the crontab file to schedule regular backups:
 ​
 ```
